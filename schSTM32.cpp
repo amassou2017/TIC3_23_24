@@ -11,7 +11,7 @@ sTask SCH_tasks_G[SCH_MAX_TASKS];
 void SCH_Update(void) 
 {
 tByte Index;
-HAL_ResumeTick();
+//HAL_ResumeTick();
 /* NOTE: calculations are in *TICKS* (not milliseconds) */
 for (Index = 0; Index < SCH_MAX_TASKS; Index++)
 {
@@ -142,7 +142,7 @@ return Return_code; /* return status */
 
 void SCH_Go_To_Sleep(void)
 {
- HAL_SuspendTick();
+ //HAL_SuspendTick();
  HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI); 
 }
 
